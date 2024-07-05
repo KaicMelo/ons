@@ -1,1 +1,19 @@
-<p>register works!</p>
+<div class="c-register">
+  <form
+  #simulationNgForm="ngForm"
+  [formGroup]="registerForm"
+>
+  <mat-form-field appearance="outline">
+    <mat-label>Nome do jogador</mat-label>
+    <input formControlName="name" matInput placeholder="Placeholder" />
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    matTooltip="Salvar"
+    (click)="onSave(registerForm.getRawValue())"
+  >
+    Salvar
+  </button>
+</form>
+</div>

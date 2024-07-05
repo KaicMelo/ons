@@ -13,4 +13,16 @@ export class PlayersService {
   get() {
     return this.http.get(`${this.API}/profile`);
   }
+
+  getById(id: string) {
+    return this.http.get(`${this.API}/profile/${id}`);
+  }
+
+  create(params: any) {
+    return this.http.post(`${this.API}/profile`,params);
+  }
+
+  update(id: string, params: any) {
+    return this.http.patch(`${this.API}/profile/${id}`,params);
+  }
 }

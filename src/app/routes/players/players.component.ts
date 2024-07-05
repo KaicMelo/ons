@@ -39,7 +39,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 export class PlayersComponent implements OnInit {
 
   myControl = new FormControl('');
-  options: string[] = ['One', 'Two', 'Three'];
   router: Router = inject(Router);
   playersService: PlayersService = inject(PlayersService);
   $playersService!: Observable<any>;
@@ -58,7 +57,11 @@ export class PlayersComponent implements OnInit {
     this.router.navigate(['players/register']);
   }
 
-  teste() {
+  onEdit(event: any) {
+    this.router.navigate([`players/register/${event.id}`]);
+  }
+
+  search() {
     const name:any = this.myControl.getRawValue();
 
     this.filteredPeople = this.players.filter((person: any) =>
