@@ -10,7 +10,7 @@
           matInput
           [formControl]="myControl"
           [matAutocomplete]="auto"
-          (window:click)="teste()"
+          (window:click)="search()"
         />
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" >
           @for (option of $playersService | async; track option) {
@@ -33,7 +33,7 @@
       <mat-card-content class="c-players__card__content">
         <div class="c-players__card__content__circle">
           <img
-            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            [src]="player.image"
             class="c-players__card__content__circle--img"
           />
         </div>
@@ -47,7 +47,7 @@
               aria-hidden="false"
               aria-label="add"
               fontIcon="edit"
-              (click)="onAdd()"
+              (click)="onEdit(player)"
             ></mat-icon>
           </div>
         </div>

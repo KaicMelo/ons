@@ -13,6 +13,10 @@ export const routes: Routes = [
     component: RegisterComponent,
   },
   {
+    path: 'players/register/:id',
+    component: RegisterComponent,
+  },
+  {
     path: 'battle',
     component: BattleComponent,
   },
