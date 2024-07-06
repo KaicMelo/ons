@@ -16,6 +16,7 @@ import { AsyncPipe } from '@angular/common';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { IPlayers } from '@shared/interfaces/players.interface';
 
 @Component({
   selector: 'app-players',
@@ -37,35 +38,33 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PlayersComponent implements OnInit {
-
   myControl = new FormControl('');
   router: Router = inject(Router);
   playersService: PlayersService = inject(PlayersService);
-  $playersService!: Observable<any>;
-  filteredOptions!: Observable<any>;
-  players: any;
-  filteredPeople: any
+  $playersService!: Observable<IPlayers[]>;
+  filteredOptions!: Observable<IPlayers[]>;
+  players: IPlayers[] = [];
+  filteredPeople: IPlayers[] = [];
 
   async ngOnInit(): Promise<void> {
     this.$playersService = this.playersService.get();
     this.players = await lastValueFrom(this.$playersService);
     this.filteredPeople = this.players;
-
   }
 
   onAdd() {
     this.router.navigate(['players/register']);
   }
 
-  onEdit(event: any) {
+  onEdit(event: IPlayers) {
     this.router.navigate([`players/register/${event.id}`]);
   }
 
   search() {
-    const name:any = this.myControl.getRawValue();
+    const form: string = this.myControl.getRawValue() as string;
 
-    this.filteredPeople = this.players.filter((person: any) =>
-      person.name.toLowerCase().includes(name.toLowerCase())
+    this.filteredPeople = this.players.filter((person: IPlayers) =>
+      person.name.toLowerCase().includes(form.toLowerCase())
     );
   }
 }
