@@ -17,8 +17,9 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PlayersService } from '../../../services/players.service';
+import { PlayersService } from '@services/players.service';
 import { lastValueFrom } from 'rxjs';
+import { IPlayers } from '@shared/interfaces/players.interface';
 
 @Component({
   selector: 'app-register',
@@ -43,13 +44,13 @@ export class RegisterComponent implements OnInit {
   playersService: PlayersService = inject(PlayersService);
 
   registerForm!: FormGroup;
-  idToEdit: any;
+  idToEdit!: string;
 
   async ngOnInit(): Promise<void> {
-    this.idToEdit = this.route.snapshot.paramMap.get('id');
+    this.idToEdit = this.route.snapshot.paramMap.get('id') as string;
 
     if (this.idToEdit) {
-      const response: any = await lastValueFrom(
+      const response: IPlayers = await lastValueFrom(
         this.playersService.getById(this.idToEdit)
       );
       this.registerForm = this.formBuild.group({
@@ -62,10 +63,10 @@ export class RegisterComponent implements OnInit {
     }
   }
 
-  onSave(event: any) {
+  onSave(event: IPlayers) {
     if (this.registerForm.valid) {
       if (this.idToEdit) {
-        const payload = {
+        const payload:IPlayers  = {
           name: event.name,
           image: event?.image
             ? event?.image
@@ -81,7 +82,7 @@ export class RegisterComponent implements OnInit {
 
         return;
       }
-      const payload = {
+      const payload:IPlayers = {
         name: event.name,
         image: event?.image
           ? event?.image
