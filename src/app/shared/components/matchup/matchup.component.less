@@ -1,29 +1,25 @@
 .c-container {
   &__card {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    justify-content: center;
+    padding: 8px;
 
-    form {
+    &__form {
       display: flex;
-    }
-    &__player1{
-      display: flex;
-      gap: 10px;
-    }
-
-    &__player2{
-      display: flex;
-      gap: 10px;
-    }
-
-    &--input{
-      width: 54px;
+      justify-content: space-around;
+      &--input {
+        width: 28px;
+        border:1px solid var(--color-gray-light);
+        border-radius: 34%;
+      }
+      &__player {
+        display: flex;
+        gap: 10px;
+      }
+      &--button {
+        color: var(--color-black);
+      }
     }
   }
-
-  .color1{
-    background-color: #5395d11a;
+  .color1 {
+    background-color: var(--color-primary-light);
   }
 }
