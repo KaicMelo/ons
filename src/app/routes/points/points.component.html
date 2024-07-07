@@ -1,1 +1,10 @@
-<p>points works!</p>
+<div class="c-points">
+  <div
+    class="c-points__grid"
+    *ngFor="let item of players; let i = index"
+    [ngClass]="lineClass(i)"
+  >
+    <div>{{ item.name }}</div>
+    <div>{{ item.points }}</div>
+  </div>
+</div>
