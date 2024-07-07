@@ -1,34 +1,36 @@
-<div class="c-container" *ngIf="($matchupsService | async) as matchups">
+<div class="c-container" *ngIf="$matchupsService | async as matchups">
   <div
     class="c-container__card"
     *ngFor="let item of matchups; let i = index"
     [ngClass]="lineClass(i)"
   >
-    <form #simulationNgForm="ngForm" [formGroup]="matchupForm">
-      <div class="c-container__card__player1">
+    <form
+      class="c-container__card__form"
+      #simulationNgForm="ngForm"
+      [formGroup]="matchupForm"
+    >
+      <div class="c-container__card__form__player">
         <input
-          class="c-container__card--input"
+          class="c-container__card__form--input"
           type="number"
           formControlName="result1"
         />
-        <mat-card appearance="outlined">
-          <mat-card-content>{{ item.player1.name }} </mat-card-content>
-        </mat-card>
+        {{ item.player1.name }}
       </div>
-      <span>X</span>
-      <div class="c-container__card__player2">
-        <mat-card appearance="outlined">
-          <mat-card-content>{{ item.player2.name }} </mat-card-content>
-        </mat-card>
+      <div class="c-container__card__form__player">
+        {{ item.player2.name }}
         <input
-          class="c-container__card--input"
+          class="c-container__card__form--input"
           type="number"
           formControlName="result2"
           [ngModel]="item.player2.value"
         />
       </div>
-
-      <button mat-button (click)="onSave(item, matchupForm.getRawValue())">
+      <button
+        mat-button
+        class="c-container__card__form--button"
+        (click)="onSave(item, matchupForm.getRawValue())"
+      >
         Salvar
       </button>
     </form>

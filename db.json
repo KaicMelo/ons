@@ -57,14 +57,14 @@
       "player1": {
         "id": "1",
         "name": "Naider",
-        "win": 1,
-        "value": 20
+        "win": 0,
+        "value": null
       },
       "player2": {
         "id": "2",
         "name": "TekkenMaster",
-        "win": 0,
-        "value": 10
+        "win": 1,
+        "value": null
       }
     },
     {

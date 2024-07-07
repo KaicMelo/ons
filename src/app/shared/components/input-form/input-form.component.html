@@ -1,0 +1,19 @@
+<form
+  class="c-register__form"
+  #simulationNgForm="ngForm"
+  [formGroup]="registerForm"
+>
+  <div class="c-register__form__field">
+    <div class="c-register__form__field--label">Nome do jogador</div>
+    <input class="c-register__form__field--input" formControlName="name" />
+  </div>
+
+  <button
+    class="c-register__form--button"
+    mat-raised-button
+    matTooltip="Salvar"
+    (click)="onSave(registerForm.getRawValue())"
+  >
+    Salvar
+  </button>
+</form>

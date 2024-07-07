@@ -23,7 +23,7 @@ export class PointsComponent implements OnInit {
 
     this.players = await lastValueFrom(
       this.playersService.get().pipe(
-        map((players: any): any => {
+        map((players: IPlayers[]): IPlayers[] => {
           players.map((fn: IPlayers) => {
             let points = 0;
 
