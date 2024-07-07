@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PlayersService } from '@services/players.service';
 import { IPlayers } from '@shared/interfaces/players.interface';
 import { InputFormComponent } from '@shared/components/input-form/input-form.component';
+import { SocketService } from '@services/socket/socket.service';
 
 @Component({
   selector: 'app-register',
@@ -21,6 +22,7 @@ export class RegisterComponent implements OnInit {
   router: Router = inject(Router);
   route: ActivatedRoute = inject(ActivatedRoute);
   playersService: PlayersService = inject(PlayersService);
+  socketService: SocketService = inject(SocketService);
 
   idToEdit!: string;
   name!: string;
@@ -34,6 +36,7 @@ export class RegisterComponent implements OnInit {
       this.playersService.update(this.idToEdit, event).subscribe({
         next: (response) => {
           this.router.navigate(['players']);
+          this.socketService.setPlayers('');
         },
         error: () => {},
       });
@@ -43,6 +46,7 @@ export class RegisterComponent implements OnInit {
     this.playersService.create(event).subscribe({
       next: () => {
         this.router.navigate(['players']);
+        this.socketService.setPlayers('');
       },
       error: () => {},
     });

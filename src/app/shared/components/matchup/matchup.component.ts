@@ -21,6 +21,7 @@ import {
 import { MatchupsService } from '@services/matchups/matchups.service';
 import { lastValueFrom, Observable } from 'rxjs';
 import { IMatchups } from '@shared/interfaces/matchups.interface';
+import { SocketService } from '@services/socket/socket.service';
 
 @Component({
   selector: 'app-matchup',
@@ -43,7 +44,9 @@ export class MatchupComponent implements OnInit {
   formBuild: FormBuilder = inject(FormBuilder);
   @Input() setClass = '';
   @Input() item!: IMatchups;
+
   matchupsService: MatchupsService = inject(MatchupsService);
+  socketService: SocketService = inject(SocketService);
 
   $matchupsService!: Observable<any[]>;
 
@@ -70,6 +73,8 @@ export class MatchupComponent implements OnInit {
 
     await lastValueFrom(this.matchupsService.update(item.id, item));
     alert('Salvo com sucesso')
+
+    this.socketService.setPoints('')
   }
 }
 

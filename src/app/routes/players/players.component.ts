@@ -17,6 +17,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { IPlayers } from '@shared/interfaces/players.interface';
+import { SocketService } from '@services/socket/socket.service';
 
 @Component({
   selector: 'app-players',
@@ -40,7 +41,10 @@ import { IPlayers } from '@shared/interfaces/players.interface';
 export class PlayersComponent implements OnInit {
   myControl = new FormControl('');
   router: Router = inject(Router);
+
   playersService: PlayersService = inject(PlayersService);
+  socketService: SocketService = inject(SocketService);
+
   $playersService!: Observable<IPlayers[]>;
   filteredOptions!: Observable<IPlayers[]>;
   players: IPlayers[] = [];
@@ -48,6 +52,14 @@ export class PlayersComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.$playersService = this.playersService.get();
+
+    this.socketService.getPlayers().subscribe((response) => {
+      this.getPlayers();
+    });
+    this.getPlayers();
+  }
+
+  async getPlayers() {
     this.players = await lastValueFrom(this.$playersService);
     this.filteredPeople = this.players;
   }

@@ -2,6 +2,7 @@ import { CommonModule, NgFor } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { MatchupsService } from '@services/matchups/matchups.service';
 import { PlayersService } from '@services/players.service';
+import { SocketService } from '@services/socket/socket.service';
 import { IPlayers } from '@shared/interfaces/players.interface';
 import { lastValueFrom, map } from 'rxjs';
 
@@ -15,10 +16,18 @@ import { lastValueFrom, map } from 'rxjs';
 export class PointsComponent implements OnInit {
   matchupsService: MatchupsService = inject(MatchupsService);
   playersService: PlayersService = inject(PlayersService);
+  socketService: SocketService = inject(SocketService);
 
   players: IPlayers[] = [];
 
   async ngOnInit(): Promise<void> {
+    this.socketService.getPoints().subscribe((response) => {
+      this.getTable();
+    });
+    this.getTable();
+  }
+
+  async getTable() {
     const pontuation = await lastValueFrom(this.matchupsService.get());
 
     this.players = await lastValueFrom(
@@ -47,7 +56,6 @@ export class PointsComponent implements OnInit {
       )
     );
   }
-
   lineClass(index: number) {
     return index % 2 == 0 ? 'color1' : 'color2';
   }
