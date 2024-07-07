@@ -1,9 +1,5 @@
-<div class="c-container" *ngIf="$matchupsService | async as matchups">
-  <div
-    class="c-container__card"
-    *ngFor="let item of matchups; let i = index"
-    [ngClass]="lineClass(i)"
-  >
+<div class="c-container">
+  <div class="c-container__card" [ngClass]="setClass">
     <form
       class="c-container__card__form"
       #simulationNgForm="ngForm"
@@ -23,7 +19,6 @@
           class="c-container__card__form--input"
           type="number"
           formControlName="result2"
-          [ngModel]="item.player2.value"
         />
       </div>
       <button
