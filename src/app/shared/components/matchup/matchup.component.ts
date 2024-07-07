@@ -18,6 +18,7 @@ import {
 } from '@angular/forms';
 import { MatchupsService } from '@services/matchups/matchups.service';
 import { lastValueFrom, Observable } from 'rxjs';
+import { IMatchups } from '@shared/interfaces/matchups.interface';
 
 @Component({
   selector: 'app-matchup',
@@ -57,7 +58,7 @@ export class MatchupComponent implements OnInit {
     return index % 2 == 0 ? 'color1' : 'color2';
   }
 
-  onSave(item: any, form: any) {
+  onSave(item: IMatchups, form: IForm) {
     if (form.result1 > form.result2) {
       item.player1.win = 1;
       item.player2.win = 0;
@@ -71,4 +72,9 @@ export class MatchupComponent implements OnInit {
 
     lastValueFrom(this.matchupsService.update(item.id, item));
   }
+}
+
+export interface IForm {
+  result1: string;
+  result2: string;
 }

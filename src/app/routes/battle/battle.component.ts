@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatchupsService } from '@services/matchups/matchups.service';
 import { PlayersService } from '@services/players.service';
 import { MatchupComponent } from '@shared/components/matchup/matchup.component';
+import { IMatchups } from '@shared/interfaces/matchups.interface';
 import { IPlayers } from '@shared/interfaces/players.interface';
 import { lastValueFrom } from 'rxjs';
 
@@ -23,7 +24,7 @@ import { lastValueFrom } from 'rxjs';
 export class BattleComponent implements OnInit {
   playersService: PlayersService = inject(PlayersService);
   matchupsService: MatchupsService = inject(MatchupsService);
-  matchups: any[] = [];
+  matchups: IMatchups[] = [];
   players: IPlayers[] = [];
 
   async ngOnInit(): Promise<void> {
@@ -62,6 +63,6 @@ export class BattleComponent implements OnInit {
       }
     }
 
-    return matchups;
+    return matchups as IMatchups[];
   }
 }

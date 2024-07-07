@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IPlayers } from '@shared/interfaces/players.interface';
 import { environment } from '@environment/environment';
+import { IMatchups } from '@shared/interfaces/matchups.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -12,15 +13,15 @@ export class MatchupsService {
 
   API = environment.API;
 
-  get():Observable<any[]> {
-    return this.http.get<any>(`${this.API}/matchups`);
+  get():Observable<IMatchups[]> {
+    return this.http.get<IMatchups[]>(`${this.API}/matchups`);
   }
 
-  setMatchups(params: any) {
+  setMatchups(params: IMatchups) {
     return this.http.post(`${this.API}/matchups`,params);
   }
 
-  update(id: string, params: IPlayers) {
+  update(id: string, params: any) {
     return this.http.patch(`${this.API}/matchups/${id}`,params);
   }
 }
