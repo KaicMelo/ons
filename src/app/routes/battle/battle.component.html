@@ -1,1 +1,6 @@
-<p>battle works!</p>
+
+<div class="c-container">
+  <button mat-button (click)="onCreateBracket()">Criar Branckets</button>
+</div>
+
+<app-matchup *ngIf="matchups"></app-matchup>
