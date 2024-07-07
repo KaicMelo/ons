@@ -57,14 +57,14 @@
       "player1": {
         "id": "1",
         "name": "Naider",
-        "win": 0,
-        "value": null
+        "win": 1,
+        "value": 10
       },
       "player2": {
         "id": "2",
         "name": "TekkenMaster",
-        "win": 1,
-        "value": null
+        "win": 0,
+        "value": 2
       }
     },
     {
@@ -73,13 +73,13 @@
         "id": "1",
         "name": "Naider",
         "win": 0,
-        "value": 1
+        "value": 2
       },
       "player2": {
         "id": "4",
         "name": "Chotte",
         "win": 1,
-        "value": 3
+        "value": 5
       }
     },
     {
@@ -87,14 +87,14 @@
       "player1": {
         "id": "1",
         "name": "Naider",
-        "win": null,
-        "value": null
+        "win": 1,
+        "value": 5
       },
       "player2": {
         "id": "3",
         "name": "Kilroy",
-        "win": null,
-        "value": null
+        "win": 0,
+        "value": 3
       }
     },
     {
@@ -102,14 +102,14 @@
       "player1": {
         "id": "1",
         "name": "Naider",
-        "win": null,
-        "value": null
+        "win": 0,
+        "value": 1
       },
       "player2": {
         "id": "5",
         "name": "4rgus",
-        "win": null,
-        "value": null
+        "win": 1,
+        "value": 2
       }
     },
     {
@@ -417,14 +417,14 @@
       "player1": {
         "id": "4",
         "name": "Chotte",
-        "win": null,
-        "value": null
+        "win": 1,
+        "value": 4
       },
       "player2": {
         "id": "5",
         "name": "4rgus",
-        "win": null,
-        "value": null
+        "win": 0,
+        "value": 2
       }
     },
     {

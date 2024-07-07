@@ -3,6 +3,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   inject,
+  Input,
   OnInit,
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -15,6 +16,7 @@ import {
   FormGroup,
   FormsModule,
   ReactiveFormsModule,
+  Validators,
 } from '@angular/forms';
 import { MatchupsService } from '@services/matchups/matchups.service';
 import { lastValueFrom, Observable } from 'rxjs';
@@ -39,6 +41,8 @@ import { IMatchups } from '@shared/interfaces/matchups.interface';
 })
 export class MatchupComponent implements OnInit {
   formBuild: FormBuilder = inject(FormBuilder);
+  @Input() setClass = '';
+  @Input() item!: IMatchups;
   matchupsService: MatchupsService = inject(MatchupsService);
 
   $matchupsService!: Observable<any[]>;
@@ -46,16 +50,10 @@ export class MatchupComponent implements OnInit {
   matchupForm!: FormGroup;
 
   async ngOnInit(): Promise<void> {
-    this.$matchupsService = this.matchupsService.get();
-
     this.matchupForm = this.formBuild.group({
-      result1: new FormControl(null),
-      result2: new FormControl(null),
+      result1: new FormControl(this.item.player1.value, [Validators.required]),
+      result2: new FormControl(this.item.player2.value, [Validators.required]),
     });
-  }
-
-  lineClass(index: number) {
-    return index % 2 == 0 ? 'color1' : 'color2';
   }
 
   onSave(item: IMatchups, form: IForm) {

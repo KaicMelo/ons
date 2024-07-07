@@ -1,6 +1,12 @@
-
 <div class="c-container">
   <button mat-button (click)="onCreateBracket()">Criar Branckets</button>
 </div>
 
-<app-matchup *ngIf="matchups"></app-matchup>
+<div *ngIf="$matchupsService | async as matchupss">
+  <div
+    class="c-container__card"
+    *ngFor="let item of matchupss; let i = index"
+  >
+    <app-matchup [item]="item" [setClass]="lineClass(i)"></app-matchup>
+  </div>
+</div>

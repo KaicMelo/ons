@@ -11,7 +11,7 @@ import { PlayersService } from '@services/players.service';
 import { MatchupComponent } from '@shared/components/matchup/matchup.component';
 import { IMatchups } from '@shared/interfaces/matchups.interface';
 import { IPlayers } from '@shared/interfaces/players.interface';
-import { lastValueFrom } from 'rxjs';
+import { lastValueFrom, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-battle',
@@ -27,7 +27,10 @@ export class BattleComponent implements OnInit {
   matchups: IMatchups[] = [];
   players: IPlayers[] = [];
 
+  $matchupsService!: Observable<any[]>;
+
   async ngOnInit(): Promise<void> {
+    this.$matchupsService = this.matchupsService.get();
     this.players = await lastValueFrom(this.playersService.get());
   }
 
@@ -64,5 +67,9 @@ export class BattleComponent implements OnInit {
     }
 
     return matchups as IMatchups[];
+  }
+
+  lineClass(index: number) {
+    return index % 2 == 0 ? 'color1' : 'color2';
   }
 }
