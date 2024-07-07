@@ -72,14 +72,14 @@
       "player1": {
         "id": "1",
         "name": "Naider",
-        "win": null,
-        "value": null
+        "win": 0,
+        "value": 1
       },
       "player2": {
         "id": "4",
         "name": "Chotte",
-        "win": null,
-        "value": null
+        "win": 1,
+        "value": 3
       }
     },
     {
@@ -237,14 +237,14 @@
       "player1": {
         "id": "2",
         "name": "TekkenMaster",
-        "win": null,
-        "value": null
+        "win": 1,
+        "value": 1
       },
       "player2": {
         "id": "6",
         "name": "Vittu",
-        "win": null,
-        "value": null
+        "win": 0,
+        "value": 0
       }
     },
     {
@@ -252,14 +252,14 @@
       "player1": {
         "id": "2",
         "name": "TekkenMaster",
-        "win": null,
-        "value": null
+        "win": 0,
+        "value": 1
       },
       "player2": {
         "id": "7",
         "name": "Felpsão",
-        "win": null,
-        "value": null
+        "win": 1,
+        "value": 2
       }
     },
     {
@@ -267,14 +267,14 @@
       "player1": {
         "id": "2",
         "name": "TekkenMaster",
-        "win": null,
-        "value": null
+        "win": 0,
+        "value": 1
       },
       "player2": {
         "id": "8",
         "name": "BK",
-        "win": null,
-        "value": null
+        "win": 1,
+        "value": 2
       }
     },
     {
@@ -297,14 +297,14 @@
       "player1": {
         "id": "2",
         "name": "TekkenMaster",
-        "win": null,
-        "value": null
+        "win": 0,
+        "value": 1
       },
       "player2": {
         "id": "10",
         "name": "Felipão",
-        "win": null,
-        "value": null
+        "win": 1,
+        "value": 2
       }
     },
     {
