@@ -20,4 +20,8 @@ export class MenuComponent {
   onBattle(): void {
     this.router.navigate(['battle']);
   }
+
+  onPoints(): void {
+    this.router.navigate(['points']);
+  }
 }
