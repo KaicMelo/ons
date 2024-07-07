@@ -56,7 +56,7 @@ export class MatchupComponent implements OnInit {
     });
   }
 
-  onSave(item: IMatchups, form: IForm) {
+  async onSave(item: IMatchups, form: IForm) {
     if (form.result1 > form.result2) {
       item.player1.win = 1;
       item.player2.win = 0;
@@ -68,7 +68,8 @@ export class MatchupComponent implements OnInit {
     item.player1.value = form.result1;
     item.player2.value = form.result2;
 
-    lastValueFrom(this.matchupsService.update(item.id, item));
+    await lastValueFrom(this.matchupsService.update(item.id, item));
+    alert('Salvo com sucesso')
   }
 }
 

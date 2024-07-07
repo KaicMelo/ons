@@ -41,6 +41,7 @@ export class PointsComponent implements OnInit {
             });
             fn.points = points;
           });
+          players.sort((a: any, b: any) => b.points - a.points);
           return players;
         })
       )
