@@ -18,6 +18,14 @@ io.on('connection', (socket) => {
     io.emit('message', message);
   });
 
+  socket.on('setPoints', (message) => {
+    io.emit('setPoints', message);
+  });
+
+  socket.on('setPlayers', (message) => {
+    io.emit('setPlayers', message);
+  });
+
   socket.on('disconnect', () => {
     console.log('Client disconnected');
   });
