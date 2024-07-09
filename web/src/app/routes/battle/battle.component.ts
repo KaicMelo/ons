@@ -31,6 +31,7 @@ export class BattleComponent implements OnInit {
   players: IPlayers[] = [];
 
   $matchupsService!: Observable<any[]>;
+  $playersService!: Observable<any[]>;
 
   async ngOnInit(): Promise<void> {
     this.getTable();
@@ -38,6 +39,8 @@ export class BattleComponent implements OnInit {
 
   async getTable() {
     this.$matchupsService = this.matchupsService.get();
+    this.$playersService = this.playersService.get();
+
     this.players = await lastValueFrom(this.playersService.get());
   }
 

@@ -162,14 +162,14 @@
       "player1": {
         "id": "1",
         "name": "Naider",
-        "win": null,
-        "value": null
+        "win": 0,
+        "value": 1
       },
       "player2": {
         "id": "9",
         "name": "Chaos",
-        "win": null,
-        "value": null
+        "win": 1,
+        "value": 3
       }
     },
     {
@@ -1089,6 +1089,1056 @@
     },
     {
       "id": "95ed",
+      "player1": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "0511",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "c1d5",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "3",
+        "name": "Kilroy",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "3833",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "d4e5",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "29de",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "ea5b",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "2cc8",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "8721",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "237d",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "afda",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "3",
+        "name": "Kilroy",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "db9c",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "b5fb",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "9dd2",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "2c20",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "8cf4",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "c950",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "5eee",
+      "player1": {
+        "id": "3",
+        "name": "Kilroy",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "8315",
+      "player1": {
+        "id": "3",
+        "name": "Kilroy",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "830f",
+      "player1": {
+        "id": "3",
+        "name": "Kilroy",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "f5cb",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "bafc",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "3e13",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "a950",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "6482",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "37f6",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "5478",
+      "player1": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "6452",
+      "player1": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "5341",
+      "player1": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "d173",
+      "player1": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "748b",
+      "player1": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "5fc9",
+      "player1": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "3f24",
+      "player1": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "fcac",
+      "player1": {
+        "id": "8",
+        "name": "BK",
+        "win": 0,
+        "value": 1
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": 1,
+        "value": 4
+      }
+    },
+    {
+      "id": "198d",
+      "player1": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "ac45",
+      "player1": {
+        "id": "9",
+        "name": "Chaos",
+        "win": 1,
+        "value": 3
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": 0,
+        "value": 2
+      }
+    },
+    {
+      "id": "abab",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "78c9",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "3",
+        "name": "Kilroy",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "72a6",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "8228",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "af00",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "5ded",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "aedd",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "a12c",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "a37b",
+      "player1": {
+        "id": "1",
+        "name": "Naider",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "b088",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "3",
+        "name": "Kilroy",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "928f",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "807b",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "743f",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "e8ba",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "cb08",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "3a96",
+      "player1": {
+        "id": "2",
+        "name": "TekkenMaster",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "9035",
+      "player1": {
+        "id": "3",
+        "name": "Kilroy",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "3e82",
+      "player1": {
+        "id": "3",
+        "name": "Kilroy",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "b047",
+      "player1": {
+        "id": "3",
+        "name": "Kilroy",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "78ca",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "2adc",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "beb6",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "aa62",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "8e72",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "b5bc",
+      "player1": {
+        "id": "4",
+        "name": "Chotte",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "d771",
+      "player1": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "1b45",
+      "player1": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "d0b0",
+      "player1": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "a90c",
+      "player1": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "1909",
+      "player1": {
+        "id": "5",
+        "name": "4rgus",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "6276",
+      "player1": {
+        "id": "6",
+        "name": "Vittu",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "1be1",
+      "player1": {
+        "id": "7",
+        "name": "Felpsão",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "8027",
+      "player1": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "9",
+        "name": "Chaos",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "9b62",
+      "player1": {
+        "id": "8",
+        "name": "BK",
+        "win": null,
+        "value": null
+      },
+      "player2": {
+        "id": "10",
+        "name": "Felipão",
+        "win": null,
+        "value": null
+      }
+    },
+    {
+      "id": "83cf",
       "player1": {
         "id": "9",
         "name": "Chaos",

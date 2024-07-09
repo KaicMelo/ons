@@ -1,0 +1,12 @@
+<div class="c-container">
+  <button mat-button (click)="onCreateBracket()">Criar Branckets</button>
+</div>
+
+<div *ngIf="$matchupsService | async as matchupsService">
+  <div *ngIf="$playersService | async as playersService">
+    <app-matchup
+      [inputmatchupsService]="matchupsService"
+      [inputPlayersService]="playersService"
+    ></app-matchup>
+  </div>
+</div>

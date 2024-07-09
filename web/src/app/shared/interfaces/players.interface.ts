@@ -3,4 +3,5 @@ export interface IPlayers {
   name: string;
   image: string;
   points?: number;
+  matchs: any[];
 }

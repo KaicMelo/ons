@@ -5,6 +5,7 @@ import {
   inject,
   Input,
   OnInit,
+  signal,
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -20,8 +21,10 @@ import {
 } from '@angular/forms';
 import { MatchupsService } from '@services/matchups/matchups.service';
 import { lastValueFrom, Observable } from 'rxjs';
-import { IMatchups } from '@shared/interfaces/matchups.interface';
+import { IMatchups, IPlayer } from '@shared/interfaces/matchups.interface';
 import { SocketService } from '@services/socket/socket.service';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { IPlayers } from '@shared/interfaces/players.interface';
 
 @Component({
   selector: 'app-matchup',
@@ -35,15 +38,18 @@ import { SocketService } from '@services/socket/socket.service';
     MatCardModule,
     ReactiveFormsModule,
     FormsModule,
+    MatExpansionModule,
   ],
   templateUrl: './matchup.component.html',
   styleUrl: './matchup.component.less',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MatchupComponent implements OnInit {
+  readonly panelOpenState = signal(false);
   formBuild: FormBuilder = inject(FormBuilder);
   @Input() setClass = '';
-  @Input() item!: IMatchups;
+  @Input() inputmatchupsService!: IMatchups[];
+  @Input() inputPlayersService!: IPlayers[];
 
   matchupsService: MatchupsService = inject(MatchupsService);
   socketService: SocketService = inject(SocketService);
@@ -53,9 +59,15 @@ export class MatchupComponent implements OnInit {
   matchupForm!: FormGroup;
 
   async ngOnInit(): Promise<void> {
-    this.matchupForm = this.formBuild.group({
-      result1: new FormControl(this.item.player1.value, [Validators.required]),
-      result2: new FormControl(this.item.player2.value, [Validators.required]),
+    this.inputPlayersService.map((players: any) => {
+      this.inputmatchupsService.map((matchups: IMatchups) => {
+        if (
+          players.id === matchups.player1.id ||
+          players.id === matchups.player2.id
+        ) {
+          players.matchs = [matchups, matchups];
+        }
+      });
     });
   }
 
@@ -72,9 +84,9 @@ export class MatchupComponent implements OnInit {
     item.player2.value = form.result2;
 
     await lastValueFrom(this.matchupsService.update(item.id, item));
-    alert('Salvo com sucesso')
+    alert('Salvo com sucesso');
 
-    this.socketService.setPoints('')
+    this.socketService.setPoints('');
   }
 }
 
