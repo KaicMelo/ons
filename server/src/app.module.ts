@@ -3,7 +3,8 @@ import { PlayersModule } from './controllers/players/players.module';
 import { MatchupsModule } from './controllers/matchups/matchups.module';
 import { PointsModule } from './controllers/points/points.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ConfigModule } from '@nestjs/config';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -11,19 +12,15 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     MatchupsModule,
     PointsModule,
     ConfigModule.forRoot(),
-    TypeOrmModule.forRootAsync({
-      imports: [ConfigModule],
-      useFactory: (configService: ConfigService) => ({
-        type: 'mysql',
-        host: configService.get('HOST'),
-        port: +configService.get('PORT'),
-        username: configService.get('USERNAME'),
-        password: configService.get('PASSWORD'),
-        database: configService.get('DATABASE'),
-        entities: [],
-        synchronize: true,
-      }),
-      inject: [ConfigService],
+    TypeOrmModule.forRoot({
+      type: 'mysql',
+      host: 'localhost',
+      port: 3306,
+      username: '',
+      password: '',
+      database: '',
+      entities: [join(process.cwd(), 'dist/**/*.entity.js')],
+      synchronize: true,
     }),
   ],
   controllers: [],
