@@ -13,18 +13,18 @@ export class PlayersService {
   API = environment.API;
 
   get(): Observable<IPlayers[]> {
-    return this.http.get<IPlayers[]>(`${this.API}/profile`);
+    return this.http.get<IPlayers[]>(`${this.API}/players`);
   }
 
   getById(id: string): Observable<IPlayers> {
-    return this.http.get<IPlayers>(`${this.API}/profile/${id}`);
+    return this.http.get<IPlayers>(`${this.API}/players/${id}`);
   }
 
   create(params: IPlayers) {
-    return this.http.post(`${this.API}/profile`,params);
+    return this.http.post(`${this.API}/players`,params);
   }
 
   update(id: string, params: IPlayers) {
-    return this.http.patch(`${this.API}/profile/${id}`,params);
+    return this.http.put(`${this.API}/players/${id}`,params);
   }
 }

@@ -15,6 +15,10 @@ export class PlayersService {
   }
 
   create(payload: any) {
+    if (!payload.image) {
+      payload.image =
+        'https://t3.ftcdn.net/jpg/05/70/71/06/360_F_570710660_Jana1ujcJyQTiT2rIzvfmyXzXamVcby8.jpg';
+    }
     return this.playersRepository.save(payload);
   }
 
