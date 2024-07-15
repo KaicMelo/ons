@@ -1,10 +1,16 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Length } from 'class-validator';
 
-@Entity({ name: 'players' })
-export class playersEntity {
+@Entity('players')
+export class PlayersEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ length: 255 })
+  @Length(1, 255)
   name: string;
+
+  @Column({ length: 255 })
+  @Length(0, 255)
+  image: string;
 }
