@@ -18,13 +18,21 @@ export class PlayersController {
   constructor(private readonly playersEntity: PlayersService) {}
 
   @Get()
-  get(): Promise<PlayersEntity[]> {
-    return this.playersEntity.findAll();
+  async get(@Res() response: Response): Promise<any> {
+    const res = await this.playersEntity.findAll();
+    if (res) return response.status(HttpStatus.OK).json(res);
+    else return response.status(HttpStatus.NOT_FOUND).json([]);
   }
 
   @Get(':id')
-  async findOne(@Param('id') id: number): Promise<any> {
-    return this.playersEntity.findOne(id);
+  async findOne(
+    @Param('id') id: number,
+    @Res() response: Response,
+  ): Promise<any> {
+    const res = await this.playersEntity.findOne(id);
+
+    if (res) return response.status(HttpStatus.OK).json(res);
+    else return response.status(HttpStatus.NOT_FOUND).json([]);
   }
 
   @Post()
