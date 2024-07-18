@@ -57,6 +57,7 @@ export class MatchupComponent implements OnInit {
   $matchupsService!: Observable<any[]>;
 
   matchupForm!: FormGroup;
+  matchups:any[] = [];
 
   async ngOnInit(): Promise<void> {
     this.inputPlayersService.map((players: any) => {
@@ -87,6 +88,11 @@ export class MatchupComponent implements OnInit {
     alert('Salvo com sucesso');
 
     this.socketService.setPoints('');
+  }
+
+  async onOpen(event: any){
+    this.matchups = [];
+    this.matchups = await lastValueFrom(this.matchupsService.getById(event));
   }
 }
 

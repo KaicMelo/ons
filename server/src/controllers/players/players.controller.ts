@@ -9,7 +9,7 @@ import {
   Delete,
   HttpStatus,
 } from '@nestjs/common';
-import { PlayersEntity } from 'src/entities/players/players.entity';
+import { PlayersEntity } from 'src/entities/players.entity';
 import { PlayersService } from 'src/services/players/players.service';
 import { Response } from 'express';
 

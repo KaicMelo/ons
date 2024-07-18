@@ -17,6 +17,10 @@ export class MatchupsService {
     return this.http.get<IMatchups[]>(`${this.API}/matchups`);
   }
 
+  getById(id: number):Observable<IMatchups[]> {
+    return this.http.get<IMatchups[]>(`${this.API}/matchups/${id}`);
+  }
+
   setMatchups(params: IMatchups) {
     return this.http.post(`${this.API}/matchups`,params);
   }

@@ -3,19 +3,20 @@
     <mat-expansion-panel
       (opened)="panelOpenState.set(true)"
       (closed)="panelOpenState.set(false)"
+      (click)="onOpen(item.id)"
     >
       <mat-expansion-panel-header>
         <mat-panel-title> {{ item.name }} </mat-panel-title>
         <mat-panel-description> 5/10 </mat-panel-description>
       </mat-expansion-panel-header>
-      <div class="c-container" *ngFor="let matchs of item?.matchs; let i = index">
+      <div class="c-container" *ngFor="let matchs of matchups; let i = index">
         <div class="c-container__card__form">
           <div class="c-container__card__form__player">
             <input class="c-container__card__form--input" type="number" />
-            {{matchs?.player1.name}}
+            {{ matchs?.name_1 }}
           </div>
           <div class="c-container__card__form__player">
-            {{matchs?.player1.name}}
+            {{ matchs?.name_2 }}
             <input class="c-container__card__form--input" type="number" />
           </div>
           <button mat-button class="c-container__card__form--button">
