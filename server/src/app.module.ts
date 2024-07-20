@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { PlayersModule } from './controllers/players/players.module';
 import { MatchupsModule } from './controllers/matchups/matchups.module';
-import { PointsModule } from './controllers/points/points.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { join } from 'path';
@@ -10,7 +9,6 @@ import { join } from 'path';
   imports: [
     PlayersModule,
     MatchupsModule,
-    PointsModule,
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'mysql',

@@ -5,6 +5,7 @@ import {
   HttpStatus,
   Param,
   Post,
+  Put,
   Res,
 } from '@nestjs/common';
 import { MatchupsService } from 'src/services/matchups/matchups.service';
@@ -72,6 +73,24 @@ export class MatchupsController {
     });
     if (res) return response.status(HttpStatus.OK).json(resp);
     else return response.status(HttpStatus.NOT_FOUND).json([]);
+  }
+
+  @Put(':id')
+  async update(
+    @Param('id') id: number,
+    @Body() request: PlayersEntity,
+    @Res() response: Response,
+  ) {
+    const res = await this.matchupsService.update(id, request);
+
+    if (res.affected)
+      return response
+        .status(HttpStatus.OK)
+        .json({ message: 'Atualizado com sucesso' });
+    else
+      return response
+        .status(HttpStatus.NOT_FOUND)
+        .json({ message: 'houve um erro ao atualizar' });
   }
 
   @Post('generate')

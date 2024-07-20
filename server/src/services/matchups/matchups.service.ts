@@ -24,4 +24,9 @@ export class MatchupsService {
     this.matchupsRepository.query('TRUNCATE matchups')
     return this.matchupsRepository.save(payload);
   }
+
+  update(id: number, payload: any): any {
+    return this.matchupsRepository.update(id, payload);
+  }
+
 }

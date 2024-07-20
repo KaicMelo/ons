@@ -26,7 +26,7 @@ export class MatchupsService {
   }
 
   update(id: string, params: any) {
-    return this.http.patch(`${this.API}/matchups/${id}`,params);
+    return this.http.put(`${this.API}/matchups/${id}`,params);
   }
 
   generateBracket(params: IPlayers[]) {

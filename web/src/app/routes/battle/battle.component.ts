@@ -10,7 +10,6 @@ import { MatchupsService } from '@services/matchups/matchups.service';
 import { PlayersService } from '@services/players.service';
 import { SocketService } from '@services/socket/socket.service';
 import { MatchupComponent } from '@shared/components/matchup/matchup.component';
-import { IMatchups } from '@shared/interfaces/matchups.interface';
 import { IPlayers } from '@shared/interfaces/players.interface';
 import { lastValueFrom, Observable } from 'rxjs';
 
@@ -27,10 +26,7 @@ export class BattleComponent implements OnInit {
   matchupsService: MatchupsService = inject(MatchupsService);
   socketService: SocketService = inject(SocketService);
 
-  matchups: IMatchups[] = [];
   players: IPlayers[] = [];
-
-  $matchupsService!: Observable<any[]>;
   $playersService!: Observable<any[]>;
 
   async ngOnInit(): Promise<void> {
@@ -38,17 +34,11 @@ export class BattleComponent implements OnInit {
   }
 
   async getTable() {
-    this.$matchupsService = this.matchupsService.get();
     this.$playersService = this.playersService.get();
-
-    this.players = await lastValueFrom(this.playersService.get());
+    this.players = await lastValueFrom(this.$playersService);
   }
 
   async onCreateBracket() {
     await lastValueFrom(this.matchupsService.generateBracket(this.players));
-  }
-
-  lineClass(index: number) {
-    return index % 2 == 0 ? 'color1' : 'color2';
   }
 }
