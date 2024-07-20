@@ -12,12 +12,12 @@
       <div class="c-container" *ngFor="let matchs of matchups; let i = index">
         <div class="c-container__card__form">
           <div class="c-container__card__form__player">
-            <input class="c-container__card__form--input" type="number" />
+            <input class="c-container__card__form--input" type="number" [value]="matchs.value_1"/>
             {{ matchs?.name_1 }}
           </div>
           <div class="c-container__card__form__player">
             {{ matchs?.name_2 }}
-            <input class="c-container__card__form--input" type="number" />
+            <input class="c-container__card__form--input" type="number" [value]="matchs.value_2"/>
           </div>
           <button mat-button class="c-container__card__form--button">
             Salvar

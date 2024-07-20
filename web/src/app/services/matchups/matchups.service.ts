@@ -28,4 +28,8 @@ export class MatchupsService {
   update(id: string, params: any) {
     return this.http.patch(`${this.API}/matchups/${id}`,params);
   }
+
+  generateBracket(params: IPlayers[]) {
+    return this.http.post(`${this.API}/matchups/generate`,params);
+  }
 }

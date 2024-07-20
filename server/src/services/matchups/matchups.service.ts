@@ -19,4 +19,9 @@ export class MatchupsService {
       where: [{ player_id_1: id }, { player_id_2: id }],
     });
   }
+
+  create(payload: any) {
+    this.matchupsRepository.query('TRUNCATE matchups')
+    return this.matchupsRepository.save(payload);
+  }
 }

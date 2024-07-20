@@ -1,4 +1,12 @@
-import { Controller, Get, HttpStatus, Param, Res } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  HttpStatus,
+  Param,
+  Post,
+  Res,
+} from '@nestjs/common';
 import { MatchupsService } from 'src/services/matchups/matchups.service';
 import { Response } from 'express';
 import { PlayersService } from 'src/services/players/players.service';
@@ -64,5 +72,25 @@ export class MatchupsController {
     });
     if (res) return response.status(HttpStatus.OK).json(resp);
     else return response.status(HttpStatus.NOT_FOUND).json([]);
+  }
+
+  @Post('generate')
+  async create(@Body() request: PlayersEntity[], @Res() response: Response) {
+    const payload = [];
+
+    for (let i = 0; i < request.length; i++) {
+      for (let j = i + 1; j < request.length; j++) {
+        payload.push({
+          player_id_1: request[i].id,
+          player_id_2: request[j].id,
+          value_1: 0,
+          value_2: 0,
+        });
+      }
+    }
+    
+    const res = await this.matchupsService.create(payload);
+
+    return response.status(HttpStatus.CREATED).json(res);
   }
 }
