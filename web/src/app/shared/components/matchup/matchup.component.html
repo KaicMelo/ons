@@ -1,0 +1,48 @@
+<div class="c-container">
+  <div *ngFor="let item of inputPlayersService; let i = index">
+    <div [ngClass]="lineClass(i)" (click)="toggleExpand(i, item.id)">
+      <div class="c-container__name">{{ item.name }}</div>
+    </div>
+    <div [ngClass]="{ expanded: expandedIndex === i }" class="expandable-div">
+      <div *ngIf="expandedIndex === i">
+        <div *ngIf="$matchupsService | async as matchupsService">
+          <div
+            class="c-container"
+            *ngFor="let matchs of matchupsService; let i = index"
+          >
+            <div
+              class="c-container__card__form"
+              [ngClass]="mathupsClass(matchs, item.id)"
+            >
+              <div class="c-container__card__form__player__info">
+                <div class="c-container__card__form__player">
+                  <input
+                    class="c-container__card__form--input"
+                    type="number"
+                    [(ngModel)]="matchs.value_1"
+                  />
+                  {{ matchs?.name_1 }}
+                </div>
+                <div class="c-container__card__form__player">
+                  {{ matchs?.name_2 }}
+                  <input
+                    class="c-container__card__form--input"
+                    type="number"
+                    [(ngModel)]="matchs.value_2"
+                  />
+                </div>
+              </div>
+              <button
+                (click)="onSave(matchs)"
+                mat-button
+                class="c-container__card__form--button"
+              >
+                Salvar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

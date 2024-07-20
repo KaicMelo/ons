@@ -1,0 +1,69 @@
+.c-container {
+  &__name {
+    height: 42px;
+  }
+
+  &__card {
+    padding: 8px;
+
+    &__form {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      &--input {
+        width: 28px;
+        border: 1px solid var(--color-gray-light);
+        border-radius: 34%;
+      }
+      &__player {
+        &__info{
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          margin: 0px 14px 0px 14px;
+        }
+
+        display: flex;
+        gap: 10px;
+      }
+      &--button {
+        color: var(--color-black);
+      }
+    }
+  }
+}
+
+.color1 {
+  background-color: var(--color-primary-light);
+  border-radius: 0px 10px 0px 10px;
+}
+
+.equal {
+  background-color: var(--color-black-light);
+}
+
+.bigger {
+  background-color: var(--color-green-light);
+}
+
+.smaller {
+  background-color: var(--color-red-light);
+}
+
+.clickable-div {
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.expandable-div {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.expandable-div.expanded {
+  max-height: 100%;
+}
