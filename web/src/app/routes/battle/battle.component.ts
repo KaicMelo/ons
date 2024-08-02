@@ -39,6 +39,9 @@ export class BattleComponent implements OnInit {
   }
 
   async onCreateBracket() {
+    if (!confirm('Deseja resetar a bracket ?')) {
+      return;
+    }
     await lastValueFrom(this.matchupsService.generateBracket(this.players));
   }
 }
