@@ -5,6 +5,23 @@
     [ngClass]="lineClass(i)"
   >
     <div>{{ item.name }}</div>
-    <div>{{ item.points }}</div>
+    <div class="c-points__grid__points">
+      {{ item.points }}
+      <mat-icon
+        *ngIf="i < 5"
+        class="c-points__grid__points--upward"
+        aria-hidden="false"
+        aria-label="arrow_upward"
+        fontIcon="arrow_upward"
+      ></mat-icon>
+
+      <mat-icon
+        *ngIf="i >= 5"
+        class="c-points__grid__points--downward"
+        aria-hidden="false"
+        aria-label="arrow_downward"
+        fontIcon="arrow_downward"
+      ></mat-icon>
+    </div>
   </div>
 </div>

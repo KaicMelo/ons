@@ -1,5 +1,6 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { MatchupsService } from '@services/matchups/matchups.service';
 import { PlayersService } from '@services/players.service';
 import { SocketService } from '@services/socket/socket.service';
@@ -9,7 +10,7 @@ import { lastValueFrom, map } from 'rxjs';
 @Component({
   selector: 'app-points',
   standalone: true,
-  imports: [NgFor, CommonModule],
+  imports: [NgFor, CommonModule,MatIconModule],
   templateUrl: './points.component.html',
   styleUrl: './points.component.less',
 })
