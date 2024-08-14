@@ -72,6 +72,20 @@ export class PlayersComponent implements OnInit {
     this.router.navigate([`players/register/${event.id}`]);
   }
 
+  async onDelete(event: IPlayers) {
+    if (!confirm('Deseja deletar ?')) {
+      return;
+    }
+    this.playersService.delete(event.id).subscribe({
+      next: () => {
+        this.socketService.setPlayers('');
+      },
+      error: (err) => {
+        alert('Erro ao deletar');
+      },
+    });
+  }
+
   search() {
     const form: string = this.myControl.getRawValue() as string;
 

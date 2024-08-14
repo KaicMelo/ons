@@ -27,4 +27,8 @@ export class PlayersService {
   update(id: string, params: IPlayers) {
     return this.http.put(`${this.API}/players/${id}`,params);
   }
+
+  delete(id: any) {
+    return this.http.delete(`${this.API}/players/${id}`);
+  }
 }
