@@ -42,12 +42,20 @@
           <span class="c-players__card__content__detail--name">{{
             player.name
           }}</span>
-          <div class="c-players__card__content__detail--edit">
+          <div class="c-players__card__content__detail__actions">
             <mat-icon
+              class="c-players__card__content__detail__actions--edit"
               aria-hidden="false"
               aria-label="add"
               fontIcon="edit"
               (click)="onEdit(player)"
+            ></mat-icon>
+            <mat-icon
+              class="c-players__card__content__detail__actions--delete"
+              aria-hidden="false"
+              aria-label="delete"
+              fontIcon="delete"
+              (click)="onDelete(player)"
             ></mat-icon>
           </div>
         </div>

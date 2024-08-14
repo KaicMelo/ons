@@ -25,4 +25,9 @@ export const routes: Routes = [
     path: 'points',
     component: PointsComponent,
   },
+  {
+    path: '',
+    pathMatch:'full',
+    redirectTo:'players'
+  }
 ];
