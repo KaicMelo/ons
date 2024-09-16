@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "onsprocessoseletivo",
     "public": "dist/ons/browser",
     "ignore": [
       "firebase.json",
