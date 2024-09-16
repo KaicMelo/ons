@@ -1,11 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
+import { SocketIoModule } from 'ngx-socket-io';
 import { SocketIoConfigModule } from './socket-io-config/socket-io-config.module';
 import { MenuComponent } from './routes/menu/menu.component';
 import { SocketService } from '@services/socket/socket.service';
-
-const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
 @Component({
   selector: 'app-root',

@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  API: 'https://ons-tnhx.onrender.com:3000',
-  SOCKET: 'https://ons-tnhx.onrender.com:3001'
+  API: 'https://ons-tnhx.onrender.com',
+  SOCKET: 'https://socket-selection-process.onrender.com'
 };
