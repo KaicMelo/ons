@@ -5,12 +5,13 @@ import { MatchupsService } from '@services/matchups/matchups.service';
 import { PlayersService } from '@services/players.service';
 import { SocketService } from '@services/socket/socket.service';
 import { IPlayers } from '@shared/interfaces/players.interface';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { lastValueFrom, map } from 'rxjs';
 
 @Component({
   selector: 'app-points',
   standalone: true,
-  imports: [NgFor, CommonModule,MatIconModule],
+  imports: [NgFor, CommonModule,MatIconModule, NgxSkeletonLoaderModule],
   templateUrl: './points.component.html',
   styleUrl: './points.component.less',
 })

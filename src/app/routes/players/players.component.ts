@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { IPlayers } from '@shared/interfaces/players.interface';
 import { SocketService } from '@services/socket/socket.service';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @Component({
   selector: 'app-players',
@@ -33,6 +34,7 @@ import { SocketService } from '@services/socket/socket.service';
     MatAutocompleteModule,
     ReactiveFormsModule,
     AsyncPipe,
+    NgxSkeletonLoaderModule
   ],
   templateUrl: './players.component.html',
   styleUrl: './players.component.less',

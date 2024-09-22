@@ -1,3 +1,7 @@
+<div *ngIf="!players.length">
+  <ngx-skeleton-loader count="5" appearance="line"  [theme]="{height: '40px'}" />
+</div>
+
 <div class="c-points">
   <div
     class="c-points__grid"

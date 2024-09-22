@@ -27,7 +27,9 @@
       (click)="onAdd()"
     ></mat-icon>
   </div>
-
+  <div *ngIf="!filteredPeople.length">
+    <ngx-skeleton-loader count="5" appearance="line"  [theme]="{height: '70px'}" />
+  </div>
   <div class="c-players__card__content--card" *ngFor="let player of filteredPeople">
     <mat-card class="c-players__card" appearance="outlined">
       <mat-card-content class="c-players__card__content">

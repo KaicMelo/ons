@@ -11,12 +11,13 @@ import { PlayersService } from '@services/players.service';
 import { SocketService } from '@services/socket/socket.service';
 import { MatchupComponent } from '@shared/components/matchup/matchup.component';
 import { IPlayers } from '@shared/interfaces/players.interface';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { lastValueFrom, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-battle',
   standalone: true,
-  imports: [MatButtonModule, MatchupComponent, CommonModule],
+  imports: [MatButtonModule, MatchupComponent, CommonModule, NgxSkeletonLoaderModule],
   templateUrl: './battle.component.html',
   styleUrl: './battle.component.less',
   changeDetection: ChangeDetectionStrategy.OnPush,
