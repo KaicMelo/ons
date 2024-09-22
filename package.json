@@ -8,6 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "json": "npx json-server db.json -p 3000",
+    "emulate": "firebase emulators:start",
+    "deploy": "firebase deploy",
     "pwa": "angular-http-server -p 9000 --path ./dist/ons/browser/"
   },
   "private": true,
