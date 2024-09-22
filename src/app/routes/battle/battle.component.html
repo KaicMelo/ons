@@ -2,8 +2,14 @@
   <button mat-button (click)="onCreateBracket()">Criar Branckets</button>
 </div>
 
-  <div *ngIf="$playersService | async as playersService">
-    <app-matchup
-      [inputPlayersService]="playersService"
-    ></app-matchup>
+<ng-template #loading>
+  <ngx-skeleton-loader
+    count="5"
+    appearance="line"
+    [theme]="{ height: '70px' }"
+  />
+</ng-template>
+
+<div *ngIf="$playersService | async as playersService; else loading">
+  <app-matchup [inputPlayersService]="playersService"></app-matchup>
 </div>
